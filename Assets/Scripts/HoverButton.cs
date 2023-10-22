@@ -11,9 +11,13 @@ public class HoverButton : MonoBehaviour
     public GameObject Flash;
     public GameObject Eyes;
     public GameObject Arrow;
+    public AudioClip Whoosh;
     private bool flashBool = false;
-    public float FlashPower = 15;
-    public float FlashTimer = 0.6f;
+    public float FlashPower = 20;
+    public float FlashTimer = 1.3f;
+
+
+
     void Start()
     {
         
@@ -23,6 +27,9 @@ public class HoverButton : MonoBehaviour
     {
         if (flashBool)
         {
+            var source = GetComponent<AudioSource>();
+            source.PlayOneShot(Whoosh);
+
             Flash.gameObject.GetComponent<Light2D>().pointLightOuterRadius += FlashPower * Time.deltaTime;
             Flash.gameObject.GetComponent<Light2D>().intensity += FlashPower * Time.deltaTime;
             FlashTimer -= Time.deltaTime;
