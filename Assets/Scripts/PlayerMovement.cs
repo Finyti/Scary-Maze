@@ -29,6 +29,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Die()
     {
-
+        SceneManager.LoadScene("LooseScene");
     }
 }
