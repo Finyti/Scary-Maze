@@ -22,7 +22,6 @@ public class MoveTrap : MonoBehaviour
     {
         if (!Triggered)
         {
-            print("AA");
             MoveObject.transform.position = MoveTo;
             Triggered = true;
         }
