@@ -1,4 +1,4 @@
-### Unity Scary Maze (NOT FINISHED)
+### Unity Scary Maze
 
 The point of this game is to get out of a maze!
 
